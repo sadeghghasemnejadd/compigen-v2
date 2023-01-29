@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "eveleth-bold";
+  src: url("./../../../fonts/eveleth-bold.otf");
+}
+@font-face {
+  font-family: "branding-black";
+  src: url("./../../../fonts/BrandingSF-Black.ttf");
+}
+@font-face {
+  font-family: "branding-bold";
+  src: url("./../../../fonts/BrandingSF-Bold.ttf");
+}
+@font-face {
+  font-family: "branding-med";
+  src: url("./../../../fonts/BrandingSF-Medium.ttf");
+}
+html {
+  font-size: 62.5%;
+  font-family: branding-med;
+}
+body {
+  font-size: 1.6rem;
+}
