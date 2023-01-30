@@ -6,7 +6,7 @@
     width: 7.2rem;
   }
   &__image:hover ~ &__text {
-    transform: translateX(-150%);
+    transform: translateX(-100%);
     opacity: 0;
   }
   &__text {
