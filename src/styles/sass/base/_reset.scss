@@ -9,7 +9,7 @@
   height: 90rem;
   background: linear-gradient(180deg, $color-prmary 0%, $color-white 62.26%);
   position: fixed;
-  z-index: -1000;
+  z-index: map-get($z-index, "background");
   top: 0;
   left: 0;
 }
