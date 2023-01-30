@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import LogoIcon from "./../../../../images/svg/logo.svg";
 const Logo: React.FunctionComponent = () => {
   return (
