@@ -1,10 +1,12 @@
 import Logo from "./Logo";
-
+import Nav from "./nav";
 const Navbar = () => {
   return (
     <>
       <Logo />
-      <div></div>
+      <nav>
+        <Nav />
+      </nav>
       <div></div>
     </>
   );

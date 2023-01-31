@@ -1,0 +1,22 @@
+.nav {
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    &__item {
+      transition: all 0.5s;
+      &--active {
+        border-bottom: 0.4rem solid $color-accent;
+        padding-bottom: 0.4rem;
+      }
+      &--link {
+        text-decoration: none;
+        color: $color-prmary-dark-3;
+        font-family: branding-black;
+      }
+      &:hover {
+        transform: translateY($translate-y-hover * 1rem);
+      }
+    }
+  }
+}

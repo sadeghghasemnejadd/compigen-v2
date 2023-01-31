@@ -79,7 +79,7 @@
         transition-delay: 0s;
       }
       &:hover {
-        transform: translateY(-0.3rem);
+        transform: translateY($translate-y-hover * 1rem);
         transition-delay: 0s;
       }
     }

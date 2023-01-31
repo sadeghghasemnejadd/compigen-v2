@@ -1,6 +1,6 @@
 import React from "react";
 import LogoIcon from "./../../../../images/svg/logo.svg";
-const Logo: React.FunctionComponent = () => {
+const Logo = () => {
   return (
     <div className="logo">
       <div className="logo__image">
