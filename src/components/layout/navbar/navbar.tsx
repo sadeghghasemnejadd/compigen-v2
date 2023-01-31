@@ -4,6 +4,8 @@ const Navbar = () => {
   return (
     <>
       <Logo />
+      <div></div>
+      <div></div>
     </>
   );
 };

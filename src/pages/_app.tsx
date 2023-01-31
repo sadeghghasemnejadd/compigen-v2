@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/navbar/navbar";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <header>
+      <header className="header">
         <Navbar />
       </header>
       <main>
