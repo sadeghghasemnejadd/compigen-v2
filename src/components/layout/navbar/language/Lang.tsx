@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Icon from "@/components/UI/Icon";
-import { ILang } from "@/models/languageInterFAce";
+import { ILang } from "@/models/languageInterFace";
 const Lang = () => {
   const languages: ILang[] = [
     { id: 0, name: "En", default: true },
