@@ -6,15 +6,15 @@ const Lang = () => {
     { id: 0, name: "En", default: true },
     { id: 1, name: "Fa" },
   ];
-  const [language, setLanguage] = useState<string>(languages[0].name);
+  const [language, setLanguage] = useState<ILang>(languages[0]);
 
   const changeLanguageHandler = () =>
-    setLanguage(languages.find((lang) => lang.name !== language)!.name);
+    setLanguage(languages.find((lang) => lang !== language)!);
   return (
     <div className="lang">
-      <p className="lang__text">{language}</p>
+      <p className="lang__text">{language.name}</p>
       <p className="lang__text__another" onClick={changeLanguageHandler}>
-        {languages.find((lang) => lang.name !== language)!.name}
+        {languages.find((lang) => lang !== language)!.name}
       </p>
       <Icon size={10} icon="arrow-down3" className="lang__icon" />
     </div>
