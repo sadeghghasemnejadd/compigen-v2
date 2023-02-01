@@ -4,11 +4,13 @@ import MyPic from "./my-pic";
 import HeroInformation from "./information";
 const Hero = () => {
   return (
-    <>
+    <section className="hero">
       <SocialMedia />
-      <MyPic />
-      <HeroInformation />
-    </>
+      <div>
+        <MyPic />
+        <HeroInformation />
+      </div>
+    </section>
   );
 };
 export default Hero;

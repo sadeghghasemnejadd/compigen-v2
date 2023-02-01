@@ -1,13 +1,13 @@
 import "@/styles/sass/main.scss";
 import type { AppProps } from "next/app";
-import Navbar from "@/components/layout/navbar/navbar";
+import Navbar from "@/components/layout/navbar/Navbar";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <header className="header">
         <Navbar />
       </header>
-      <main>
+      <main className="main">
         <Component {...pageProps} />
       </main>
     </>

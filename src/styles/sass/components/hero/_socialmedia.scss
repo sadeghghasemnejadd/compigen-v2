@@ -1,0 +1,13 @@
+.hero__socialmedia {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  & svg {
+    fill: $color-tertiary-dark-3;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      transform: translateY($translate-y-hover * 1rem);
+    }
+  }
+}
