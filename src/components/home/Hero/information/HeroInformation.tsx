@@ -3,6 +3,8 @@ import TertiaryHeading from "@/components/UI/TertiaryHeading";
 import MainHeading from "@/components/UI/MainHeading";
 import SimpleText from "@/components/UI/SimpleText";
 import Button from "@/components/UI/Button";
+import LinkButton from "@/components/UI/LinkButton";
+import Icon from "@/components/UI/Icon";
 const HeroInformation = () => {
   return (
     <div className="hero-information">
@@ -14,6 +16,10 @@ const HeroInformation = () => {
       </div>
       <div>
         <Button>Let's Talk</Button>
+        <LinkButton color="secondary">
+          <p>Download Portfolio</p>
+          <Icon icon="download5" size={16} color="#3c8c93" />
+        </LinkButton>
       </div>
     </div>
   );
