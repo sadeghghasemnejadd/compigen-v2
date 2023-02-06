@@ -1,0 +1,7 @@
+.main-heading {
+  font-size: 3.2rem;
+  font-family: branding-black;
+  &--color-primary {
+    color: $color-prmary-dark-3;
+  }
+}

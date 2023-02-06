@@ -6,10 +6,8 @@ const Hero = () => {
   return (
     <section className="hero">
       <SocialMedia />
-      <div>
-        <MyPic />
-        <HeroInformation />
-      </div>
+      <MyPic />
+      <HeroInformation />
     </section>
   );
 };
