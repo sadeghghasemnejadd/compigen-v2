@@ -4,6 +4,7 @@
   align-items: center;
   text-decoration: none;
   position: relative;
+  transition: all 0.5s;
   &-secondary {
     color: $color-accent-dark-2;
   }
@@ -14,5 +15,8 @@
     background-color: currentColor;
     position: absolute;
     bottom: -0.4rem;
+  }
+  &:hover {
+    transform: translateY($translate-y-hover * 1rem);
   }
 }
