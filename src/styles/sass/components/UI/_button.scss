@@ -1,0 +1,17 @@
+.btn {
+  padding: 1.6rem 3.2rem;
+  border-radius: $border-raduis-main * 1rem;
+  font-family: branding-black;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  &-primary {
+    background-color: $color-prmary;
+    color: $color-prmary-dark-3;
+    &:hover {
+      background-color: darken($color-prmary, 10);
+      transform: translateY($translate-y-hover * 1rem);
+    }
+  }
+}
