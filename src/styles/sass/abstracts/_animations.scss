@@ -6,3 +6,11 @@
     transform: translateY(0.4rem);
   }
 }
+@keyframes hero-background-move {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2rem);
+  }
+}

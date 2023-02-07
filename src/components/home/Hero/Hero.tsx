@@ -5,6 +5,7 @@ import HeroInformation from "./information";
 const Hero = () => {
   return (
     <section className="hero">
+      <div className="hero__bg"></div>
       <SocialMedia />
       <MyPic />
       <HeroInformation />
