@@ -1,0 +1,56 @@
+$colors: primary secondary;
+
+.feature-cart {
+  @each $color in $colors {
+    &--#{$color} {
+      $bg-color: if($color==primary, $color-prmary, $color-accent);
+      $border-color: if(
+        $color==primary,
+        $color-prmary-dark-2,
+        $color-accent-dark-2
+      );
+      $text-color: if(
+        $color==primary,
+        $color-prmary-dark-3,
+        $color-accent-dark-3
+      );
+      background: linear-gradient(
+        207.21deg,
+        $bg-color 0%,
+        rgba(245, 223, 77, 0.05) 96.98%
+      );
+      border: 0.2rem solid $border-color;
+      width: 25%;
+      height: 60rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: $border-raduis-main * 1rem;
+      padding: 3.2rem 1.6rem;
+      &__title,
+      &__projects {
+        align-self: center;
+      }
+      &__lists {
+        display: grid;
+        grid-template-rows: repeat(6, max-content);
+        row-gap: 4rem;
+        grid-auto-flow: column;
+        list-style: none;
+        &__list {
+          display: flex;
+          gap: 1.6rem;
+          align-items: center;
+          &--text {
+            color: $text-color;
+            font-size: 2rem;
+            font-family: branding-bold;
+          }
+          &--icon {
+            color: $border-color;
+          }
+        }
+      }
+    }
+  }
+}
