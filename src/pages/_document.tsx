@@ -5,7 +5,6 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body>
-        <div className="bg-primary-dont-move"></div>
         <Main />
         <NextScript />
       </body>

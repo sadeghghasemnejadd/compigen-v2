@@ -5,6 +5,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <header className="header">
+        <div className="bg-primary-dont-move"></div>
         <Navbar />
       </header>
       <main className="main">

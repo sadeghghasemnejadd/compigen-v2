@@ -14,11 +14,7 @@ $colors: primary secondary;
         $color-prmary-dark-3,
         $color-accent-dark-3
       );
-      background: linear-gradient(
-        207.21deg,
-        $bg-color 0%,
-        rgba(245, 223, 77, 0.05) 96.98%
-      );
+      background: linear-gradient(207.21deg, $bg-color 0%, $color-white 96.98%);
       border: 0.2rem solid $border-color;
       width: 25%;
       height: 60rem;

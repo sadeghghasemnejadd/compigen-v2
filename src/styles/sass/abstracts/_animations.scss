@@ -14,3 +14,16 @@
     transform: translateY(-2rem);
   }
 }
+@keyframes feature-background-move {
+  from {
+    transform: translateX(0);
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  to {
+    transform: translateX(80%);
+    opacity: 0.1;
+  }
+}

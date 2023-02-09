@@ -36,6 +36,57 @@ const Feature = () => {
 
   return (
     <section className="feature">
+      <div className="feature__bg">
+        <p>Figma</p>
+        <p>Html</p>
+        <p>AI</p>
+        <p>Css</p>
+        <p>Git</p>
+        <p>Adobe Xd</p>
+        <p>TypeScript</p>
+        <p>Adobe Indesign</p>
+        <p>react</p>
+        <p>sass</p>
+        <p>Adobe Photoshop</p>
+        <p>Next</p>
+        <p>webpack</p>
+        <p>Adobe Illustrator</p>
+        <p>python</p>
+      </div>
+      <div className="feature__bg">
+        <p>AI</p>
+        <p>Adobe Xd</p>
+        <p>Css</p>
+        <p>Next</p>
+        <p>webpack</p>
+        <p>Adobe Indesign</p>
+        <p>react</p>
+        <p>Adobe Illustrator</p>
+        <p>Figma</p>
+        <p>Html</p>
+        <p>Adobe Photoshop</p>
+        <p>Git</p>
+        <p>TypeScript</p>
+        <p>sass</p>
+        <p>python</p>
+      </div>
+      <div className="feature__bg">
+        <p>Adobe Indesign</p>
+        <p>Adobe Photoshop</p>
+        <p>Next</p>
+        <p>Css</p>
+        <p>webpack</p>
+        <p>Html</p>
+        <p>Adobe Xd</p>
+        <p>AI</p>
+        <p>Git</p>
+        <p>react</p>
+        <p>Adobe Illustrator</p>
+        <p>python</p>
+        <p>Figma</p>
+        <p>TypeScript</p>
+        <p>sass</p>
+      </div>
       {featureCartData.map((cart) => (
         <FeatureCart
           title={cart.title}

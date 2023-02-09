@@ -2,4 +2,72 @@
   display: flex;
   justify-content: space-between;
   margin-top: 3.2rem;
+  position: relative;
+  overflow: hidden;
+  &__bg:first-child {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-family: eveleth-bold;
+    color: $color-prmary-dark-1;
+    z-index: map-get($z-index, featurebackground);
+    & p {
+      opacity: 0.1;
+    }
+    @for $p from 1 through 40 {
+      & p:nth-child(#{$p}) {
+        $rand: (random(8) + 3) * 1s;
+        $rand-2: (random(10) + 2) * 1s;
+        animation: feature-background-move $rand $rand-2 linear infinite;
+      }
+    }
+  }
+  &__bg:nth-child(2) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-family: eveleth-bold;
+    color: $color-prmary-dark-2;
+    z-index: map-get($z-index, featurebackground);
+    & p {
+      opacity: 0.1;
+    }
+    @for $p from 1 through 40 {
+      & p:nth-child(#{$p}) {
+        $rand: (random(10) + 4) * 1s;
+        $rand-2: (random(10) + 2) * 1s;
+        animation: feature-background-move $rand $rand-2 linear infinite;
+      }
+    }
+  }
+  &__bg:nth-child(3) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-family: eveleth-bold;
+    color: $color-prmary-dark-3;
+    z-index: map-get($z-index, featurebackground);
+    & p {
+      opacity: 0.1;
+    }
+    @for $p from 1 through 40 {
+      & p:nth-child(#{$p}) {
+        $rand: (random(7) + 2) * 1s;
+        $rand-2: (random(10) + 4) * 1s;
+        animation: feature-background-move $rand $rand-2 linear infinite;
+      }
+    }
+  }
 }
