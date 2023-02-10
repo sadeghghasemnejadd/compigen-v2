@@ -87,15 +87,18 @@ const Feature = () => {
         <p>TypeScript</p>
         <p>sass</p>
       </div>
-      {featureCartData.map((cart) => (
-        <FeatureCart
-          title={cart.title}
-          items={cart.items}
-          projectCount={cart.projectCount}
-          key={cart.id}
-          color={cart.color}
-        />
-      ))}
+      <div className="feature__carts">
+        {featureCartData.map((cart) => (
+          <FeatureCart
+            title={cart.title}
+            items={cart.items}
+            projectCount={cart.projectCount}
+            key={cart.id}
+            color={cart.color}
+          />
+        ))}
+      </div>
+      <p>BackEnd Developer soon...😉</p>
     </section>
   );
 };

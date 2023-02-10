@@ -1,9 +1,10 @@
 .feature {
-  display: flex;
-  justify-content: space-between;
   margin-top: 3.2rem;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
   &__bg:first-child {
     position: absolute;
     width: 100%;
@@ -69,5 +70,9 @@
         animation: feature-background-move $rand $rand-2 linear infinite;
       }
     }
+  }
+  &__carts {
+    display: flex;
+    justify-content: space-between;
   }
 }
