@@ -35,7 +35,7 @@ const Feature = () => {
   ];
 
   return (
-    <section className="feature">
+    <section className="feature section__padding">
       <div className="feature__bg">
         <p>Figma</p>
         <p>Html</p>

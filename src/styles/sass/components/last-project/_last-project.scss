@@ -1,0 +1,49 @@
+.last-project {
+  margin-top: 3.2rem;
+  position: relative;
+  // test
+  height: 60rem;
+  &__bg {
+    position: absolute;
+    z-index: map-get($z-index, lastbackground);
+    width: 100%;
+    height: 100%;
+    background-color: $color-prmary-light-3;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 40%;
+      height: 20%;
+      background-color: $color-prmary-light-3;
+      bottom: 0;
+      right: 20%;
+      transform: translateY(45%);
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 4.8rem;
+      height: 4.8rem;
+      border-radius: 50%;
+      border: 1rem solid rgba($color-tertiary-light-2, 0.1);
+      top: 20%;
+      left: 30%;
+      z-index: map-get($z-index, lastbackgroundshapes);
+    }
+    &--shapes {
+      z-index: map-get($z-index, lastbackgroundshapes);
+      &:first-child {
+        position: absolute;
+        right: 0;
+        top: 10%;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        left: 5%;
+        bottom: 10%;
+      }
+    }
+  }
+}
