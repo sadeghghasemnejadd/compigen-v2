@@ -1,8 +1,7 @@
 .last-project {
   margin-top: 3.2rem;
   position: relative;
-  // test
-  height: 60rem;
+
   &__bg {
     position: absolute;
     z-index: map-get($z-index, lastbackground);
