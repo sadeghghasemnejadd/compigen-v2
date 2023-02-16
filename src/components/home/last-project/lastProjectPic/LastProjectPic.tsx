@@ -1,13 +1,9 @@
 import React from "react";
 import Image from "next/legacy/image";
 import styled from "styled-components";
-interface ILastProjectPicProps {
-  src: any;
-  alt: string;
-  color: string;
-}
+import IPictureData from "@/models/PictureData";
 
-const LastProjectPic = ({ src, alt, color }: ILastProjectPicProps) => {
+const LastProjectPic = ({ src, alt, color, logos }: IPictureData) => {
   const ImageBoxShadow = styled.div`
     position: absolute;
     width: 100%;
@@ -23,6 +19,13 @@ const LastProjectPic = ({ src, alt, color }: ILastProjectPicProps) => {
       <div className="last-project-pic__image" data-color={color}>
         <Image src={src} alt={alt} layout="responsive" objectFit="contain" />
         <ImageBoxShadow />
+      </div>
+      <div className="last-project-pic__logos">
+        {logos.map((logo) => (
+          <div key={logo.id} className="last-project-pic__logos__image">
+            <Image src={logo.src} alt={logo.alt} layout="intrinsic" />
+          </div>
+        ))}
       </div>
     </div>
   );

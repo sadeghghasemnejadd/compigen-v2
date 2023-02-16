@@ -1,8 +1,27 @@
 .last-project-pic {
   flex: 0 0 45%;
+  position: relative;
   &__image {
     position: relative;
-    // cursor: pointer;
     width: 100%;
+  }
+  &__logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    height: 100%;
+    left: -13%;
+    top: 0;
+    &__image {
+      width: 7rem;
+      animation: go-up-and-down-logos 1s infinite alternate linear;
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.1s;
+      }
+    }
   }
 }
