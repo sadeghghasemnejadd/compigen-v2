@@ -1,0 +1,12 @@
+.education {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: flex-start;
+  &__table {
+    display: inline-block;
+    margin: 0 auto;
+    align-self: center;
+  }
+}
