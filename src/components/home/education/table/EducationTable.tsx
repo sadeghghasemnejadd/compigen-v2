@@ -39,7 +39,7 @@ const EducationTable = () => {
     },
     {
       id: 4,
-      year: 2020,
+      year: 2021,
       details: {
         title: "Tehran Institute of technology",
         description:
@@ -48,11 +48,20 @@ const EducationTable = () => {
     },
     {
       id: 5,
-      year: 2020,
+      year: 2022,
       details: {
         title: "Shiraz University",
         description:
           "I get FrontEnd Developer certificate . I was top student there. I make a lot of frontend project by high score. I learnd HTML ,CSS ,JAVASCRIPT ,SASS ,REACT ,BOOTSTRAP.",
+      },
+    },
+    {
+      id: 6,
+      year: 2023,
+      details: {
+        title: "Chargoon Institute",
+        description:
+          "I start my work at chargoon institute as a senior Frontend developer.I use Html,CSS,Javascript,React,Typescript.",
       },
     },
   ];
