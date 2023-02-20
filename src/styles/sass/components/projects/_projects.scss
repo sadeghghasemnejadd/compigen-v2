@@ -1,0 +1,12 @@
+.projects {
+  margin-top: 3.2rem;
+  // test
+  height: 70rem;
+  background: linear-gradient(
+      rgba($color-prmary-light-3, 0.97),
+      rgba($color-prmary-light-3, 0.97)
+    ),
+    url("./../../../../images/projects/project-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
