@@ -1,9 +1,9 @@
 import React from "react";
-
+import ProjectsNav from "./nav";
 const Projects = () => {
   return (
     <section className="section__padding projects">
-      <h1>sadegh</h1>
+      <ProjectsNav />
     </section>
   );
 };
