@@ -1,7 +1,7 @@
 .projects {
   margin-top: 3.2rem;
   // test
-  height: 70rem;
+  height: 80rem;
   background: linear-gradient(
       rgba($color-prmary-light-3, 0.97),
       rgba($color-prmary-light-3, 0.97)
@@ -9,4 +9,10 @@
     url("./../../../../images/projects/project-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  &__link {
+    align-self: flex-end;
+    margin-bottom: 1.6rem;
+  }
 }
