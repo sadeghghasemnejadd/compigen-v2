@@ -1,0 +1,59 @@
+.project-pic {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  overflow: hidden;
+  &__items {
+    display: flex;
+    position: relative;
+    transition: all 1s;
+    &__item {
+      flex: 0 0 100%;
+      display: grid;
+      grid-template-rows: max-content 1fr;
+      grid-template-columns: 1fr 50% 1fr;
+      gap: 3.2rem;
+      opacity: 0;
+      transition: all 1s;
+      &__header {
+        grid-column: 2/-1;
+        grid-row: 1/2;
+      }
+      &__image {
+        grid-column: 2/3;
+        grid-row: 2/3;
+      }
+      &__logos {
+        grid-column: 3/-1;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        justify-content: space-around;
+        &--logo {
+          width: 20%;
+        }
+      }
+      &-active {
+        opacity: 1;
+      }
+    }
+  }
+  &__pagination {
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+    &--item {
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      border: 0.4rem solid $color-accent-dark-2;
+      cursor: pointer;
+      transition: all 0.5s;
+      &-active {
+        background-color: $color-accent-dark-2;
+      }
+    }
+  }
+}

@@ -1,7 +1,6 @@
 .projects {
   margin-top: 3.2rem;
-  // test
-  height: 80rem;
+
   background: linear-gradient(
       rgba($color-prmary-light-3, 0.97),
       rgba($color-prmary-light-3, 0.97)
@@ -9,10 +8,18 @@
     url("./../../../../images/projects/project-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 1fr max-content;
+  padding-top: 3.2rem;
+  padding-bottom: 1.6rem;
+  overflow: hidden;
   &__link {
-    align-self: flex-end;
+    justify-self: end;
     margin-bottom: 1.6rem;
+  }
+  &__info {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 3.2rem;
   }
 }

@@ -1,10 +1,17 @@
 .main-heading {
   font-size: 3.2rem;
   font-family: branding-black;
+  display: inline-block;
   &--color-primary {
     color: $color-prmary-dark-3;
+    &-light {
+      color: $color-prmary-dark-2;
+    }
   }
   &--color-secondary {
     color: $color-accent-dark-3;
+    &-light {
+      color: $color-accent-dark-2;
+    }
   }
 }
