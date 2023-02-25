@@ -3,9 +3,16 @@ import React, { useEffect, useState } from "react";
 import Image from "next/legacy/image";
 import IProjectsPicData from "@/models/ProjectsPic";
 import naturePic from "@/images/projects/p-first.png";
+import compigenPic from "@/images/projects/p-second.png";
+import p724Pic from "@/images/projects/p-third.png";
+import bamboPic from "@/images/projects/p-forth.png";
 import htmlPic from "@/images/logos/html.png";
 import cssPic from "@/images/logos/css.png";
 import sassPic from "@/images/logos/sass.png";
+import reactPic from "@/images/logos/react.png";
+import javascriptPic from "@/images/logos/javascript.png";
+import typescriptPic from "@/images/logos/typescript.png";
+import nextPic from "@/images/logos/next.png";
 interface IprojectPicProps {
   activeTab: "frontend" | "graphic";
 }
@@ -26,33 +33,41 @@ const ProjectsPic = ({ activeTab }: IprojectPicProps) => {
       },
       {
         id: 1,
-        img: naturePic,
+        img: compigenPic,
         logos: [
           { id: 0, img: htmlPic, alt: "html logo" },
-          { id: 1, img: cssPic, alt: "css logo" },
-          { id: 2, img: sassPic, alt: "sass logo" },
+          { id: 1, img: sassPic, alt: "sass logo" },
+          { id: 2, img: reactPic, alt: "react logo" },
+          { id: 3, img: nextPic, alt: "next logo" },
+          { id: 4, img: javascriptPic, alt: "javascript logo" },
+          { id: 5, img: typescriptPic, alt: "typescript logo" },
         ],
-        title: "Nature2",
+        title: "Compigen",
       },
       {
         id: 2,
-        img: naturePic,
+        img: p724Pic,
         logos: [
           { id: 0, img: htmlPic, alt: "html logo" },
           { id: 1, img: cssPic, alt: "css logo" },
           { id: 2, img: sassPic, alt: "sass logo" },
+          { id: 3, img: reactPic, alt: "react logo" },
+          { id: 4, img: javascriptPic, alt: "javascript logo" },
+          { id: 5, img: typescriptPic, alt: "tpescript logo" },
         ],
-        title: "Nature3",
+        title: "pardakht724",
       },
       {
         id: 3,
-        img: naturePic,
+        img: bamboPic,
         logos: [
           { id: 0, img: htmlPic, alt: "html logo" },
           { id: 1, img: cssPic, alt: "css logo" },
           { id: 2, img: sassPic, alt: "sass logo" },
+          { id: 3, img: reactPic, alt: "react logo" },
+          { id: 4, img: javascriptPic, alt: "javascript logo" },
         ],
-        title: "Nature4",
+        title: "Bambo",
       },
     ],
     graphic: [],
