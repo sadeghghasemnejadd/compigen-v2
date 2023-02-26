@@ -18,12 +18,26 @@
     &:focus {
       outline: 0.1rem solid $color-prmary-dark-1;
     }
-    &--text-area {
-      height: 32.1rem;
-      border-radius: $border-raduis-main * 1rem;
-      border: 0.2rem solid $color-prmary-dark-1;
-      padding: 0.8rem;
-      font-family: branding-med;
+    &__text-area {
+      position: relative;
+      &__input {
+        width: 100%;
+        height: 32.1rem;
+        border-radius: $border-raduis-main * 1rem;
+        border: 0.2rem solid $color-prmary-dark-1;
+        padding: 0.8rem;
+        font-family: branding-med;
+        position: relative;
+        &:focus {
+          outline: 0.1rem solid $color-prmary-dark-1;
+        }
+      }
+      &__count {
+        position: absolute;
+        opacity: 0.5;
+        bottom: 4%;
+        right: 2%;
+      }
     }
   }
 }
