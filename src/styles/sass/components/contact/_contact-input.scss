@@ -10,14 +10,57 @@
     letter-spacing: 5%;
     font-family: branding-black;
   }
-  &__input {
-    height: 5.6rem;
-    border-radius: $border-raduis-main * 1rem;
-    border: 0.2rem solid $color-prmary-dark-1;
-    padding: 0 0.8rem;
-    &:focus {
-      outline: 0.1rem solid $color-prmary-dark-1;
+  &__text {
+    position: relative;
+    &__input {
+      height: 5.6rem;
+      width: 100%;
+      border-radius: $border-raduis-main * 1rem;
+      border: 0.2rem solid $color-prmary-dark-1;
+      padding: 0 0.8rem;
+      &:focus {
+        outline: 0.1rem solid $color-prmary-dark-1;
+      }
+      &--success {
+        border: 0.2rem solid $color-success;
+        &:focus {
+          outline: 0.1rem solid $color-success;
+        }
+      }
     }
+    &__error {
+      margin: 0.8rem;
+      text-transform: capitalize;
+      color: $color-error;
+      position: absolute;
+      bottom: -60%;
+    }
+    &__error ~ &__input {
+      border: 0.2rem solid $color-error;
+      position: relative;
+
+      &:focus {
+        outline: 0.1rem solid $color-error;
+      }
+    }
+    &--error-icon {
+      position: absolute;
+      z-index: 1;
+      right: 3%;
+      top: 50%;
+      transform: translateY(-50%);
+      fill: $color-error;
+    }
+    &--success-icon {
+      position: absolute;
+      z-index: 1;
+      right: 3%;
+      top: 50%;
+      transform: translateY(-50%);
+      fill: $color-success;
+    }
+  }
+  &__input {
     &__text-area {
       position: relative;
       &__input {
@@ -31,12 +74,21 @@
         &:focus {
           outline: 0.1rem solid $color-prmary-dark-1;
         }
+        &-error {
+          border: 0.2rem solid $color-error;
+          &:focus {
+            outline: 0.1rem solid $color-error;
+          }
+        }
       }
       &__count {
         position: absolute;
         opacity: 0.5;
         bottom: 4%;
         right: 2%;
+        &-error {
+          color: $color-error;
+        }
       }
     }
   }
