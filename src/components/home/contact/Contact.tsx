@@ -2,6 +2,9 @@ import MainHeading from "@/components/UI/MainHeading";
 import React from "react";
 import ContactInput from "./contact-input";
 import emailValidation from "@/helper/email-validation";
+import Button from "@/components/UI/Button";
+import Icon from "@/components/UI/Icon";
+import ContactInfo from "./contact-info";
 const Contact = () => {
   const inputData = [
     {
@@ -28,7 +31,7 @@ const Contact = () => {
     <section className="section__padding contact">
       <MainHeading text="Let's Talk" />
       <div className="contact__details">
-        <form className="contact__details__inputs">
+        <form className="contact__details__form">
           {inputData.map((input) => (
             <ContactInput
               text={input.text}
@@ -37,7 +40,12 @@ const Contact = () => {
               validation={input.validation}
             />
           ))}
+
+          <Button className="contact__details__form__button">
+            Send <Icon icon="compass2" size={15} />
+          </Button>
         </form>
+        <ContactInfo />
       </div>
     </section>
   );
