@@ -90,6 +90,41 @@
           color: $color-error;
         }
       }
+      &--success {
+        border: 0.2rem solid $color-success;
+        &:focus {
+          outline: 0.1rem solid $color-success;
+        }
+      }
+      &--error-icon {
+        position: absolute;
+        z-index: 1;
+        right: 1%;
+        top: 3%;
+        fill: $color-error;
+      }
+      &--success-icon {
+        position: absolute;
+        z-index: 1;
+        right: 1%;
+        top: 3%;
+        fill: $color-success;
+      }
+      &__error {
+        margin: 0.8rem;
+        text-transform: capitalize;
+        color: $color-error;
+        position: absolute;
+        bottom: -10%;
+      }
+      &__error ~ &__input {
+        border: 0.2rem solid $color-error;
+        position: relative;
+
+        &:focus {
+          outline: 0.1rem solid $color-error;
+        }
+      }
     }
   }
 }

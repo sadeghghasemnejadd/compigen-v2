@@ -6,10 +6,22 @@ interface IContactProps {
   type: string;
   placeHolder: string;
   validation?: (value: string) => boolean;
+  value: string;
+  setValue: Function;
+  validationState?: { status: boolean; message: string };
+  setValidationState?: Function;
+  blured?: boolean;
+  setBlured?: Function;
 }
 
-const ErrorMessage = ({ message }: { message: string }) => {
-  return <div className="contact-input__text__error">{message}</div>;
+const ErrorMessage = ({
+  message,
+  className,
+}: {
+  message?: string;
+  className: string;
+}) => {
+  return <div className={className}>{message}</div>;
 };
 
 const ContactInput = ({
@@ -17,81 +29,112 @@ const ContactInput = ({
   type,
   placeHolder,
   validation,
+  value,
+  setValue,
+  validationState,
+  setValidationState,
+  blured,
+  setBlured,
 }: IContactProps) => {
   const [count, setCount] = useState<number>(0);
-  const [textArea, setTextArea] = useState<string>("");
-
-  const [emailValidation, setEmailValidation] = useState({
-    status: false,
-    message: "",
-  });
-  const [emailInput, setEmailInput] = useState("");
-  const [emailBlured, setEmailBlured] = useState(false);
-
-  const [textValidation, setTextValidation] = useState({
-    status: false,
-    message: "",
-  });
-  const [textInput, setTextInput] = useState("");
-  const [textBlured, setTextBlured] = useState(false);
 
   const handleEmailChange = (e: ChangeEvent) => {
     const elementValue = (e.target as HTMLInputElement).value;
-    setEmailBlured(true);
-    setEmailInput(elementValue);
+    setBlured && setBlured(true);
+    setValue(elementValue);
     if (!elementValue) {
-      setEmailValidation({
-        status: false,
-        message: "email shouldn`t be empty.",
-      });
+      setValidationState &&
+        setValidationState({
+          status: false,
+          message: "email shouldn`t be empty.",
+        });
+
       return;
     }
     if (!validation?.(elementValue)) {
-      setEmailValidation({ status: false, message: "email is invalid" });
+      setValidationState &&
+        setValidationState({ status: false, message: "email is invalid" });
       return;
     } else {
-      setEmailValidation({ status: true, message: "" });
+      setValidationState && setValidationState({ status: true, message: "" });
     }
   };
 
   const handleTextChange = (e: ChangeEvent) => {
     const elementValue = (e.target as HTMLInputElement).value;
-    setTextBlured(true);
-    setTextInput(elementValue);
+    setBlured && setBlured(true);
+    setValue(elementValue);
     if (!elementValue) {
-      setTextValidation({
-        status: false,
-        message: "name shouldn`t be empty.",
-      });
+      setValidationState &&
+        setValidationState({
+          status: false,
+          message: "name shouldn`t be empty.",
+        });
       return;
     }
     if (elementValue.length > 100) {
-      setTextValidation({
-        status: false,
-        message: "The name shouldn`t be more than 100 characters.",
-      });
+      setValidationState &&
+        setValidationState({
+          status: false,
+          message: "The name shouldn`t be more than 100 characters.",
+        });
       return;
     } else {
-      setTextValidation({ status: true, message: "" });
+      setValidationState && setValidationState({ status: true, message: "" });
     }
   };
 
   const textAreaChangeHandler = (e: any) => {
     if (e.target.value.length > 1000) return;
-    setTextArea(e.target.value);
+    setValue(e.target.value);
     setCount(e.target.value.length);
+    setBlured && setBlured(true);
+    if (!e.target.value) {
+      setValidationState &&
+        setValidationState({
+          status: false,
+          message: "text area shouldn`t be empty",
+        });
+      return;
+    } else {
+      setValidationState && setValidationState({ status: true, message: "" });
+    }
   };
   return (
     <div className="contact-input">
       <label className="contact-input__label">{text}</label>
       {type === "textarea" ? (
         <div className="contact-input__input__text-area">
+          {blured && !validationState?.status ? (
+            <>
+              <ErrorMessage
+                message={validationState?.message}
+                className="contact-input__input__text-area__error"
+              />
+              <Icon
+                size={20}
+                icon={"cross"}
+                className="contact-input__input__text-area--error-icon"
+              />
+            </>
+          ) : (
+            blured && (
+              <Icon
+                size={20}
+                icon={"checkmark4"}
+                className="contact-input__input__text-area--success-icon"
+              />
+            )
+          )}
           <textarea
             placeholder={placeHolder}
             className={`contact-input__input__text-area__input ${
               count > 1000 && "contact-input__input__text-area__input-error"
+            } ${
+              validationState?.status &&
+              "contact-input__input__text-area--success"
             }`}
-            value={textArea}
+            value={value}
             onChange={textAreaChangeHandler}
           />
           <div
@@ -104,9 +147,12 @@ const ContactInput = ({
         </div>
       ) : type === "email" ? (
         <div className="contact-input__text">
-          {emailBlured && !emailValidation?.status ? (
+          {blured && !validationState?.status ? (
             <>
-              <ErrorMessage message={emailValidation?.message} />
+              <ErrorMessage
+                message={validationState?.message}
+                className="contact-input__text__error"
+              />
               <Icon
                 size={20}
                 icon={"cross"}
@@ -114,7 +160,7 @@ const ContactInput = ({
               />
             </>
           ) : (
-            emailBlured && (
+            blured && (
               <Icon
                 size={20}
                 icon={"checkmark4"}
@@ -127,17 +173,20 @@ const ContactInput = ({
             type={type}
             placeholder={placeHolder}
             className={`contact-input__text__input ${
-              emailValidation?.status && "contact-input__text__input--success"
+              validationState?.status && "contact-input__text__input--success"
             }`}
-            value={emailInput}
+            value={value}
             onChange={(e) => handleEmailChange(e)}
           />
         </div>
       ) : (
         <div className="contact-input__text">
-          {textBlured && !textValidation?.status ? (
+          {blured && !validationState?.status ? (
             <>
-              <ErrorMessage message={textValidation?.message} />
+              <ErrorMessage
+                message={validationState?.message}
+                className="contact-input__text__error"
+              />
               <Icon
                 size={20}
                 icon={"cross"}
@@ -145,7 +194,7 @@ const ContactInput = ({
               />
             </>
           ) : (
-            textBlured && (
+            blured && (
               <Icon
                 size={20}
                 icon={"checkmark4"}
@@ -157,9 +206,9 @@ const ContactInput = ({
             type={type}
             placeholder={placeHolder}
             className={`contact-input__text__input ${
-              textValidation?.status && "contact-input__text__input--success"
+              validationState?.status && "contact-input__text__input--success"
             }`}
-            value={textInput}
+            value={value}
             onChange={(e) => handleTextChange(e)}
           />
         </div>
