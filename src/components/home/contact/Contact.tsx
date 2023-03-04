@@ -64,7 +64,7 @@ const Contact = () => {
       setBlured: setTextAreaBlured,
     },
   ];
-  const formSubmitHandler = (e: FormEvent) => {
+  const formSubmitHandler = async (e: FormEvent) => {
     e.preventDefault();
     setEmailBlured(true);
     setTextBlured(true);
@@ -75,6 +75,20 @@ const Contact = () => {
       !textValidation.status
     )
       return;
+    const data = { email: emailInput, name: textInput, message: textArea };
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      console.log(res);
+    } catch (err) {
+      throw err;
+    }
   };
   return (
     <section className="section__padding contact">

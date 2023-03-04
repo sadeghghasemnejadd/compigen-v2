@@ -39,7 +39,7 @@ const ContactInfo = () => {
     <div className="contact-info">
       <div className="contact-info__details">
         {contactData.map((cdata) => (
-          <div className="contact-info__details__item">
+          <div className="contact-info__details__item" key={cdata.id}>
             <Icon
               icon={cdata.icon}
               size={30}
@@ -56,7 +56,7 @@ const ContactInfo = () => {
         <h2 className="contact-info__works__title">More work on</h2>
         <div className="contact-info__works__logos">
           {logoData.map((logo) => (
-            <div className="contact-info__works__logos--logo">
+            <div className="contact-info__works__logos--logo" key={logo.id}>
               <Link
                 href={logo.url}
                 className="contact-info__works__logos--logo--link"
