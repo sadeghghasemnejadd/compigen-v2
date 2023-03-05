@@ -1,6 +1,6 @@
 .footer {
   margin-top: 3.2rem;
-  // test
-  height: 60rem;
   background-color: $color-neutral-dark-3;
+  display: flex;
+  justify-content: space-between;
 }

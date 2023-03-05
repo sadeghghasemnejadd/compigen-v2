@@ -1,9 +1,9 @@
 import React from "react";
-
+import FooterLogo from "./footer-logo";
 const Footer = () => {
   return (
     <>
-      <h1>sadegh</h1>
+      <FooterLogo />
     </>
   );
 };
