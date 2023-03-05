@@ -1,7 +1,9 @@
 .footer {
   margin-top: 3.2rem;
   background-color: $color-neutral-dark-3;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr max-content 1fr;
   align-items: center;
+  justify-items: center;
+  position: relative;
 }

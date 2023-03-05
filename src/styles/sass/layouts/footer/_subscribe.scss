@@ -20,7 +20,10 @@
       border-bottom: 0.2rem solid $color-neutral-light-3;
       padding-bottom: 1rem;
       font-size: 2rem;
-      color: rgba(#fff, 0.5);
+      color: $color-neutral-light-3;
+      &::placeholder {
+        color: rgba(#fff, 0.5);
+      }
       &:focus {
         outline: none;
       }

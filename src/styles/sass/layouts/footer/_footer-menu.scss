@@ -1,0 +1,20 @@
+.footer-menu {
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    &__item {
+      font-size: 2rem;
+      transition: all 0.5s;
+      text-align: center;
+      &--link {
+        text-decoration: none;
+        color: $color-neutral-light-3;
+      }
+      &:hover {
+        transform: translateY($translate-y-hover * 1rem);
+      }
+    }
+  }
+}
