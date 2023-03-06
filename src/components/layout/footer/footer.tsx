@@ -2,6 +2,7 @@ import React from "react";
 import FooterLogo from "./footer-logo";
 import Subscribe from "./subscribe";
 import Link from "next/link";
+import FooterButton from "./footer-bottom";
 const Footer = () => {
   const menuData = [
     { id: 0, name: "About me", to: "/" },
@@ -25,6 +26,7 @@ const Footer = () => {
           ))}
         </ul>
       </section>
+      <FooterButton />
     </>
   );
 };

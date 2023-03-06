@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <main className="main">
         <Component {...pageProps} />
       </main>
-      <footer className="footer section__padding">
+      <footer className="footer">
         <Footer />
       </footer>
     </>
