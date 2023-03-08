@@ -4,6 +4,35 @@
     display: flex;
     justify-content: space-between;
     margin-top: 3.2rem;
+    min-height: 50rem;
+    &__loader {
+      flex: 0 0 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__svg {
+        width: 10rem;
+        display: block;
+        &--path {
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 0;
+        }
+        &--circle {
+          -webkit-animation: dash 2s ease-in-out;
+          animation: dash 2s ease-in-out;
+        }
+        &--check {
+          stroke-dashoffset: -100;
+          -webkit-animation: dash-check 2s 0.35s ease-in-out forwards;
+          animation: dash-check 2s 0.35s ease-in-out forwards;
+        }
+        &--line {
+          stroke-dashoffset: 1000;
+          -webkit-animation: dash 2s 0.35s ease-in-out forwards;
+          animation: dash 2s 0.35s ease-in-out forwards;
+        }
+      }
+    }
     &__form {
       flex: 0 0 60%;
       display: grid;
@@ -30,5 +59,41 @@
         }
       }
     }
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
   }
 }

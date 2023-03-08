@@ -132,6 +132,7 @@ const ContactInput = ({
               count > 1000 && "contact-input__input__text-area__input-error"
             } ${
               validationState?.status &&
+              blured &&
               "contact-input__input__text-area--success"
             }`}
             value={value}
@@ -173,7 +174,9 @@ const ContactInput = ({
             type={type}
             placeholder={placeHolder}
             className={`contact-input__text__input ${
-              validationState?.status && "contact-input__text__input--success"
+              validationState?.status &&
+              blured &&
+              "contact-input__text__input--success"
             }`}
             value={value}
             onChange={(e) => handleEmailChange(e)}
@@ -206,7 +209,9 @@ const ContactInput = ({
             type={type}
             placeholder={placeHolder}
             className={`contact-input__text__input ${
-              validationState?.status && "contact-input__text__input--success"
+              validationState?.status &&
+              blured &&
+              "contact-input__text__input--success"
             }`}
             value={value}
             onChange={(e) => handleTextChange(e)}

@@ -29,7 +29,10 @@ export default function (req: any, res: any) {
   };
   transport.sendMail(mailData, function (err: any, info: any) {
     if (err) console.log(err);
-    else console.log(info);
+    else {
+      res.status(200);
+      res.json({ message: "ok" });
+    }
   });
   const mailData2 = {
     from: "compigen.official@gmail.com",
@@ -40,8 +43,10 @@ export default function (req: any, res: any) {
   };
   transport.sendMail(mailData2, function (err: any, info: any) {
     if (err) console.log(err);
-    else console.log(info);
+    else {
+      res.status(200);
+      res.json({ message: "ok" });
+    }
   });
-  console.log(req.body);
   res.status(200);
 }
