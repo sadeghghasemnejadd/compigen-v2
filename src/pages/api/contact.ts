@@ -1,17 +1,21 @@
-const nodemailer = require("nodemailer");
 require("dotenv").config();
-export default function (req: any, res: any) {
-  const transport = nodemailer.createTransport({
+const nodemailer = require("nodemailer");
+import IMailData from "@/models/MailData";
+import INextApiRequest from "@/models/NextApiRequest";
+import ITransport from "@/models/TransportNode";
+export default function (req: INextApiRequest, res: any) {
+  const transportData: ITransport = {
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-      user: "compigen.official@gmail.com",
-      pass: process.env.PASSWORD,
+      user: process.env.EMAIL_ADDRESS!,
+      pass: process.env.PASSWORD!,
     },
     secure: true,
-  });
-  const mailData = {
-    from: "compigen.official@gmail.com",
+  };
+  const transport = nodemailer.createTransport(transportData);
+  const mailData: IMailData = {
+    from: process.env.EMAIL_ADDRESS!,
     to: req.body.email,
     subject: `Contact with me message`,
     text: req.body.message,
@@ -27,6 +31,7 @@ export default function (req: any, res: any) {
     <a href="https://www.linkedin.com/in/sadegh-ghasemnejad-a4882622a">LinkedIn</a>
     `,
   };
+
   transport.sendMail(mailData, function (err: any, info: any) {
     if (err) console.log(err);
     else {
@@ -34,9 +39,9 @@ export default function (req: any, res: any) {
       res.json({ message: "ok" });
     }
   });
-  const mailData2 = {
-    from: "compigen.official@gmail.com",
-    to: "compigen.official@gmail.com",
+  const mailData2: IMailData = {
+    from: process.env.EMAIL_ADDRESS!,
+    to: process.env.EMAIL_ADDRESS!,
     subject: `compigen website From ${req.body.name}`,
     text: req.body.message,
     html: `<h1>${req.body.message}</h1>`,

@@ -3,8 +3,9 @@ import FooterLogo from "./footer-logo";
 import Subscribe from "./subscribe";
 import Link from "next/link";
 import FooterButton from "./footer-bottom";
+import IMenuData from "@/models/FooterMenuData";
 const Footer = () => {
-  const menuData = [
+  const menuData: IMenuData[] = [
     { id: 0, name: "About me", to: "/" },
     { id: 1, name: "Projects", to: "/" },
     { id: 2, name: "Contact", to: "/" },

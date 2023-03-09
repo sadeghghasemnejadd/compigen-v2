@@ -1,8 +1,9 @@
 import Icon from "@/components/UI/Icon";
+import IFooterLogoData from "@/models/FooterLogoData";
 import Link from "next/link";
 import React from "react";
 const FooterButton = () => {
-  const logoData = [
+  const logoData: IFooterLogoData[] = [
     { id: 0, src: "facebook", href: "/" },
     { id: 1, src: "twitter", href: "/" },
     { id: 2, src: "behance", href: "/" },
