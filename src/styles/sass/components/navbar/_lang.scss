@@ -1,4 +1,7 @@
 .lang {
+  @include responsive(2xs) {
+    display: none;
+  }
   display: flex;
   align-items: center;
   justify-self: end;

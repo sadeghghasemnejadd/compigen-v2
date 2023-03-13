@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <>
       <Logo />
-      <nav>
+      <nav className="nav">
         <Nav />
       </nav>
       <Lang />

@@ -1,0 +1,37 @@
+@mixin responsive($size) {
+  @if $size==2xs {
+    @media only screen and (max-width: 27em) {
+      @content;
+    }
+  }
+  @if $size==xs {
+    @media only screen and (max-width: 31em) {
+      @content;
+    }
+  }
+  @if $size==sm {
+    @media only screen and (max-width: 40em) {
+      @content;
+    }
+  }
+  @if $size==md {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  }
+  @if $size==lg {
+    @media only screen and (max-width: 64em) {
+      @content;
+    }
+  }
+  @if $size==xl {
+    @media only screen and (max-width: 80em) {
+      @content;
+    }
+  }
+  @if $size==2xl {
+    @media only screen and (min-width: 96em) {
+      @content;
+    }
+  }
+}

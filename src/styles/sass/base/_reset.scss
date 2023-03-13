@@ -20,6 +20,11 @@
   align-items: center;
   justify-content: center;
   padding: 0 1.6rem;
+  @include responsive(2xs) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
 }
 .section__padding {
   padding: 0 1.6rem;
