@@ -2,14 +2,32 @@
   position: relative;
   display: flex;
   align-items: center;
+  @include responsive(2md) {
+    justify-self: center;
+  }
   &__title {
     font-size: 4.8rem;
     font-family: eveleth-bold;
     text-align: right;
     margin-right: -4rem;
+    @include responsive(sm) {
+      font-size: 3.6rem;
+    }
   }
   &__image {
     width: 60rem;
+    @include responsive(lg) {
+      width: 50rem;
+    }
+    @include responsive(2md) {
+      width: 70rem;
+    }
+    @include responsive(sm) {
+      width: 60rem;
+    }
+    @include responsive(2xs) {
+      width: 50rem;
+    }
   }
   &__logos {
     position: absolute;

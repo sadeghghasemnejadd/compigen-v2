@@ -4,6 +4,12 @@
   align-items: center;
   margin-top: 3.2rem;
   position: relative;
+  @include responsive(2md) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 2.4rem;
+  }
   &__bg {
     width: 90%;
     height: 100%;

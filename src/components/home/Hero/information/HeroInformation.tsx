@@ -18,7 +18,11 @@ const HeroInformation = () => {
         <Button>Let's Talk</Button>
         <LinkButton color="secondary">
           <p>Download Portfolio</p>
-          <Icon icon="download5" size={16} color="#3c8c93" />
+          <Icon
+            icon="download5"
+            size={16}
+            className="hero-information__btns--icon"
+          />
         </LinkButton>
       </div>
     </div>

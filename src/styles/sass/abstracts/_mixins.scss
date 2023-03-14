@@ -1,4 +1,9 @@
 @mixin responsive($size) {
+  @if $size==3xs {
+    @media only screen and (max-width: 20em) {
+      @content;
+    }
+  }
   @if $size==2xs {
     @media only screen and (max-width: 27em) {
       @content;
@@ -19,6 +24,11 @@
       @content;
     }
   }
+  @if $size==2md {
+    @media only screen and (max-width: 54.5em) {
+      @content;
+    }
+  }
   @if $size==lg {
     @media only screen and (max-width: 64em) {
       @content;
@@ -29,7 +39,17 @@
       @content;
     }
   }
+  @if $size==1xl {
+    @media only screen and (max-width: 70.5em) {
+      @content;
+    }
+  }
   @if $size==2xl {
+    @media screen and (max-width: 90em) {
+      @content;
+    }
+  }
+  @if $size==3xl {
     @media only screen and (min-width: 96em) {
       @content;
     }
