@@ -23,6 +23,9 @@ $colors: primary secondary;
       justify-content: space-between;
       border-radius: $border-raduis-main * 1rem;
       padding: 3.2rem 1.6rem;
+      @include responsive(2md) {
+        width: 40%;
+      }
       &__title,
       &__projects {
         align-self: center;
@@ -44,6 +47,10 @@ $colors: primary secondary;
           }
           &--icon {
             color: $border-color;
+            @include responsive(lg) {
+              width: 2rem;
+              height: 2rem;
+            }
           }
         }
       }
