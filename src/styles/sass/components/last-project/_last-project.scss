@@ -33,6 +33,9 @@
     }
     &--shapes {
       z-index: map-get($z-index, lastbackgroundshapes);
+      @include responsive(md) {
+        width: 10rem;
+      }
       &:first-child {
         position: absolute;
         right: 0;

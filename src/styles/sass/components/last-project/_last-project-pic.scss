@@ -15,6 +15,9 @@
     top: 0;
     &__image {
       width: 7rem;
+      @include responsive(sm) {
+        width: 5rem;
+      }
       animation: go-up-and-down-logos 1s infinite alternate linear;
       &:nth-child(2) {
         animation-delay: 0.2s;
