@@ -59,6 +59,9 @@
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
+        @include responsive(xs) {
+          width: 25rem;
+        }
         &--title {
           color: $color-accent-dark-2;
           font-family: branding-bold;
