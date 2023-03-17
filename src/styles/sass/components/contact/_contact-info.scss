@@ -4,7 +4,9 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-
+  @include responsive(2xs) {
+    flex: 0 0 20%;
+  }
   &__details {
     display: flex;
     flex-direction: column;
@@ -21,6 +23,10 @@
       &--icon {
         fill: $color-accent-dark-1;
         grid-row: 1/-1;
+        @include responsive(2md) {
+          width: 2.4rem;
+          height: 2.4rem;
+        }
       }
       &--value {
         color: rgba($color-accent-dark-3, 0.6);

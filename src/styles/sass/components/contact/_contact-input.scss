@@ -27,6 +27,9 @@
           outline: 0.1rem solid $color-success;
         }
       }
+      &::placeholder {
+        font-size: 1.6rem;
+      }
     }
     &__error {
       margin: 0.8rem;
@@ -79,6 +82,9 @@
           &:focus {
             outline: 0.1rem solid $color-error;
           }
+        }
+        &::placeholder {
+          font-size: 1.6rem;
         }
       }
       &__count {

@@ -39,12 +39,26 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(3, max-content);
       gap: 3.2rem;
+      @include responsive(sm) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, max-content);
+      }
+      @include responsive(2xs) {
+        flex: 0 0 70%;
+      }
       &__button {
         grid-row: 3/-1;
         justify-self: start;
         display: flex;
         align-items: center;
         gap: 0.8rem;
+        @include responsive(sm) {
+          grid-row: 4/-1;
+        }
+        &--icon {
+          width: 1.6rem;
+          height: 1.6rem;
+        }
         &--disabled {
           cursor: not-allowed;
           background-color: $color-prmary-light-2;

@@ -209,7 +209,12 @@ const Contact = () => {
                 "contact__details__form__button--disabled"
               }`}
             >
-              Send <Icon icon="compass2" size={15} />
+              Send{" "}
+              <Icon
+                icon="compass2"
+                size={15}
+                className="contact__details__form__button--icon"
+              />
             </Button>
           </form>
         )}
