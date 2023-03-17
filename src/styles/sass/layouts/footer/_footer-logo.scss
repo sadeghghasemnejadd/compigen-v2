@@ -1,3 +1,6 @@
 .footer-logo {
   width: 32rem;
+  @include responsive(sm) {
+    width: 25rem;
+  }
 }

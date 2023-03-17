@@ -30,6 +30,10 @@
       &__link {
         &--icon {
           fill: #fff;
+          @include responsive(2xs) {
+            width: 2.4rem;
+            height: 2.4rem;
+          }
         }
       }
     }

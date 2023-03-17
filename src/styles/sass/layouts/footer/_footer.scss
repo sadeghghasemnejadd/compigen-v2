@@ -6,4 +6,8 @@
   align-items: center;
   justify-items: center;
   position: relative;
+  @include responsive(sm) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content 1fr max-content 1fr;
+  }
 }
