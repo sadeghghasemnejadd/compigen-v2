@@ -7,7 +7,7 @@ const Projects = () => {
     "frontend"
   );
   return (
-    <section className="section__padding projects">
+    <section className="section__padding projects" id="projects">
       <div className="projects__info">
         <ProjectsNav />
         <ProjectsPic activeTab={activeTab} />

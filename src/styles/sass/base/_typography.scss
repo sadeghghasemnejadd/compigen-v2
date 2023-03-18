@@ -27,6 +27,7 @@
   font-style: normal;
 }
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
   font-family: branding-med;
   @include responsive(2xl) {

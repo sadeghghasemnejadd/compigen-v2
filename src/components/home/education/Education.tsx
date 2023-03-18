@@ -4,7 +4,7 @@ import EducationTable from "./table";
 
 const Education = () => {
   return (
-    <section className="education section__padding">
+    <section className="education section__padding" id="education">
       <SecondHeading text="Education" />
       <div className="education__table">
         <EducationTable />

@@ -117,7 +117,7 @@ const Contact = () => {
     }
   };
   return (
-    <section className="section__padding contact">
+    <section className="section__padding contact" id="contact">
       <MainHeading text="Let's Talk" />
       <div className="contact__details">
         {loading ? (

@@ -4,10 +4,17 @@ import { Inav } from "@/models/navInterface";
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const navData: Inav[] = [
-    { id: 0, title: "About me", active: true },
-    { id: 1, title: "Projects" },
-    { id: 2, title: "Contact" },
+    { id: 0, title: "About me", active: true, section: "about" },
+    { id: 1, title: "Education", section: "education" },
+    { id: 2, title: "Projects", section: "projects" },
+    { id: 3, title: "Contact", section: "contact" },
   ];
+  const scrollHandler = (e: any, id: string) => {
+    e.preventDefault();
+    document.querySelector(`#${id}`)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <div
@@ -44,7 +51,10 @@ const Nav = () => {
                   nav.active && "nav__menu__list__item--active"
                 }`}
               >
-                <Link href="/" className="nav__menu__list__item--link">
+                <Link
+                  href={`#${nav.section}`}
+                  className="nav__menu__list__item--link"
+                >
                   {nav.title}
                 </Link>
               </li>
@@ -60,7 +70,11 @@ const Nav = () => {
               nav.active && "nav__list__item--active"
             }`}
           >
-            <Link href="/" className="nav__list__item--link">
+            <Link
+              href={`/`}
+              className="nav__list__item--link"
+              onClick={(e) => scrollHandler(e, nav.section)}
+            >
               {nav.title}
             </Link>
           </li>
