@@ -29,7 +29,7 @@
     &__item {
       &__link {
         &--icon {
-          fill: #fff;
+          fill: $color-white;
           @include responsive(2xs) {
             width: 2.4rem;
             height: 2.4rem;
