@@ -1,7 +1,8 @@
 import "@/styles/sass/main.scss";
 import type { AppProps } from "next/app";
-import Navbar from "@/components/layout/navbar/Navbar";
+import Navbar from "@/components/layout/navbar/navbar";
 import Footer from "@/components/layout/footer/footer";
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
