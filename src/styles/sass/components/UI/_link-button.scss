@@ -6,7 +6,7 @@
   position: relative;
   transition: all 0.5s;
   &-secondary {
-    color: $color-accent-dark-2;
+    @include theme-aware(color, color-accent-dark-2);
   }
   &::after {
     content: "";

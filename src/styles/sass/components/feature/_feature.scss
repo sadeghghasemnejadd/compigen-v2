@@ -14,7 +14,7 @@
     justify-content: space-between;
     font-size: 1rem;
     font-family: eveleth-bold;
-    color: $color-prmary-dark-1;
+    @include theme-aware(color, color-accent-dark-1);
     z-index: map-get($z-index, featurebackground);
     & p {
       opacity: 0.1;
@@ -36,7 +36,7 @@
     justify-content: space-between;
     font-size: 1rem;
     font-family: eveleth-bold;
-    color: $color-prmary-dark-2;
+    @include theme-aware(color, color-accent-dark-2);
     z-index: map-get($z-index, featurebackground);
     & p {
       opacity: 0.1;
@@ -58,7 +58,7 @@
     justify-content: space-between;
     font-size: 1rem;
     font-family: eveleth-bold;
-    color: $color-prmary-dark-3;
+    @include theme-aware(color, color-accent-dark-3);
     z-index: map-get($z-index, featurebackground);
     & p {
       opacity: 0.1;

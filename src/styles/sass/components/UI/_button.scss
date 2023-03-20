@@ -7,10 +7,10 @@
   cursor: pointer;
   transition: all 0.5s;
   &-primary {
-    background-color: $color-prmary;
-    color: $color-prmary-dark-3;
+    @include theme-aware(background-color, color-prmary);
+    @include theme-aware(color, color-prmary-dark-3);
     &:hover {
-      background-color: darken($color-prmary, 10);
+      @include theme-aware-darken(background-color, color-prmary, 10);
       transform: translateY($translate-y-hover * 1rem);
     }
   }

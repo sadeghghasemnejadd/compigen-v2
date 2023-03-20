@@ -3,19 +3,26 @@ $colors: primary secondary;
 .feature-cart {
   @each $color in $colors {
     &--#{$color} {
-      $bg-color: if($color==primary, $color-prmary, $color-accent);
+      $bg-color: if($color==primary, color-prmary, color-accent);
       $border-color: if(
         $color==primary,
-        $color-prmary-dark-2,
-        $color-accent-dark-2
+        color-prmary-dark-2,
+        color-accent-dark-2
       );
       $text-color: if(
         $color==primary,
-        $color-prmary-dark-3,
-        $color-accent-dark-3
+        color-prmary-dark-3,
+        color-accent-dark-3
       );
-      background: linear-gradient(207.21deg, $bg-color 0%, $color-white 96.98%);
-      border: 0.2rem solid $border-color;
+      @include theme-aware-gradient(
+        $bg-color,
+        $color-white,
+        207.21deg,
+        0%,
+        96.98%
+      );
+      // background: linear-gradient(207.21deg, $bg-color 0%, $color-white 96.98%);
+      @include theme-aware-outline(border, $border-color, 0.2rem, solid);
       width: 25%;
       height: 60rem;
       display: flex;
@@ -41,12 +48,12 @@ $colors: primary secondary;
           gap: 1.6rem;
           align-items: center;
           &--text {
-            color: $text-color;
+            @include theme-aware(color, $text-color);
             font-size: 2rem;
             font-family: branding-bold;
           }
           &--icon {
-            color: $border-color;
+            @include theme-aware(color, $border-color);
             @include responsive(lg) {
               width: 2rem;
               height: 2rem;

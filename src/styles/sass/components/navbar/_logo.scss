@@ -28,13 +28,12 @@
   &__text {
     font-family: branding-black;
     font-size: 2.4rem;
-    background: linear-gradient(
-      to right,
-      $color-accent-dark-1,
-      $color-prmary-dark-3
+
+    @include theme-aware-gradient-text(
+      color-accent-dark-1,
+      color-prmary-dark-3,
+      right
     );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     z-index: -1;
     transition: all 0.5s;
   }
@@ -46,8 +45,14 @@
     transition: all 0.5s;
     &--circle {
       border-radius: 50%;
-      border: 0.1rem solid rgba($color-prmary-dark-3, 0.3);
-      box-shadow: 0 0 0.8rem rgba($color-prmary-dark-3, 0.3);
+      @include theme-aware-outline(
+        border,
+        color-prmary-dark-3,
+        0.1rem,
+        solid,
+        0.3
+      );
+      @include theme-aware-box-shadow(color-prmary-dark-3, 0.3);
       cursor: pointer;
       opacity: 0;
       visibility: hidden;
@@ -65,7 +70,7 @@
         }
       }
       &-1 {
-        background-color: $color-prmary;
+        background-color: #f5df4d;
         transition: all 0.5s;
       }
       &-2 {

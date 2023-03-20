@@ -61,14 +61,14 @@
         }
         &--disabled {
           cursor: not-allowed;
-          background-color: $color-prmary-light-2;
-          color: $color-prmary-dark-2;
+          @include theme-aware(background-color, color-prmary-light-2);
+          @include theme-aware(color, color-prmary-dark-2);
           & svg {
-            fill: $color-prmary-dark-2;
+            @include theme-aware(fill, color-prmary-dark-2);
           }
           &:hover {
             transform: translateY(0);
-            background-color: $color-prmary-light-2;
+            @include theme-aware(background-color, color-prmary-light-2);
           }
         }
       }

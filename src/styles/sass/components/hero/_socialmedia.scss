@@ -10,7 +10,7 @@
     gap: 4.8rem;
   }
   & svg {
-    fill: $color-tertiary-dark-3;
+    @include theme-aware(fill, color-tertiary-dark-3);
     cursor: pointer;
     transition: all 0.5s;
     @include responsive(3xs) {

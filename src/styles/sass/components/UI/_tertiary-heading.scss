@@ -1,6 +1,6 @@
 .tertiary-heading {
   font-family: branding-black;
-  color: $color-tertiary-dark-2;
+  @include theme-aware(color, color-tertiary-dark-2);
   display: flex;
   align-items: center;
   gap: 0.4rem;
@@ -12,6 +12,6 @@
   &__line {
     width: 3.2rem;
     height: 0.2rem;
-    background-color: $color-tertiary-dark-2;
+    @include theme-aware(background-color, color-tertiary-dark-2);
   }
 }

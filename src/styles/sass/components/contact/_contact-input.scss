@@ -5,7 +5,7 @@
     grid-column: 1/-1;
   }
   &__label {
-    color: $color-prmary-dark-3;
+    @include theme-aware(color, color-prmary-dark-3);
     font-size: 2.4rem;
     letter-spacing: 5%;
     font-family: branding-black;
@@ -16,10 +16,15 @@
       height: 5.6rem;
       width: 100%;
       border-radius: $border-raduis-main * 1rem;
-      border: 0.2rem solid $color-prmary-dark-1;
+      @include theme-aware-outline(border, color-prmary-dark-1, 0.2rem, solid);
       padding: 0 0.8rem;
       &:focus {
-        outline: 0.1rem solid $color-prmary-dark-1;
+        @include theme-aware-outline(
+          outline,
+          color-prmary-dark-1,
+          0.1rem,
+          solid
+        );
       }
       &--success {
         border: 0.2rem solid $color-success;
@@ -70,12 +75,22 @@
         width: 100%;
         height: 32.1rem;
         border-radius: $border-raduis-main * 1rem;
-        border: 0.2rem solid $color-prmary-dark-1;
+        @include theme-aware-outline(
+          border,
+          color-prmary-dark-1,
+          0.2rem,
+          solid
+        );
         padding: 0.8rem;
         font-family: branding-med;
         position: relative;
         &:focus {
-          outline: 0.1rem solid $color-prmary-dark-1;
+          @include theme-aware-outline(
+            outline,
+            color-prmary-dark-1,
+            0.1rem,
+            solid
+          );
         }
         &-error {
           border: 0.2rem solid $color-error;

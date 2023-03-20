@@ -3,15 +3,15 @@
   font-family: branding-black;
   display: inline-block;
   &--color-primary {
-    color: $color-prmary-dark-3;
+    @include theme-aware(color, color-prmary-dark-3);
     &-light {
-      color: $color-prmary-dark-2;
+      @include theme-aware(color, color-prmary-dark-2);
     }
   }
   &--color-secondary {
-    color: $color-accent-dark-3;
+    @include theme-aware(color, color-accent-dark-3);
     &-light {
-      color: $color-accent-dark-2;
+      @include theme-aware(color, color-accent-dark-2);
     }
   }
 }

@@ -15,7 +15,7 @@
     bottom: -100%;
   }
   &__text {
-    color: $color-prmary-dark-3;
+    @include theme-aware(color, color-prmary-dark-3);
     &__another {
       position: absolute;
       bottom: 0;
@@ -26,6 +26,6 @@
   }
 
   &__icon {
-    fill: $color-prmary-dark-3;
+    @include theme-aware(fill, color-prmary-dark-3);
   }
 }

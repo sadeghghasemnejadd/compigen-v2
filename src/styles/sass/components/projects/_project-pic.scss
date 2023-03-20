@@ -48,11 +48,11 @@
       width: 2.4rem;
       height: 2.4rem;
       border-radius: 50%;
-      border: 0.4rem solid $color-accent-dark-2;
+      @include theme-aware-outline(border, color-accent-dark-2, 0.4rem, solid);
       cursor: pointer;
       transition: all 0.5s;
       &-active {
-        background-color: $color-accent-dark-2;
+        @include theme-aware(background-color, color-accent-dark-2);
       }
     }
   }

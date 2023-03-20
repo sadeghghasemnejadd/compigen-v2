@@ -1,11 +1,12 @@
 .projects {
   margin-top: 3.2rem;
-
-  background: linear-gradient(
-      rgba($color-prmary-light-3, 0.97),
-      rgba($color-prmary-light-3, 0.97)
-    ),
-    url("./../../../../images/projects/project-bg.png");
+  @include theme-aware-gradient-image(
+    color-prmary-light-3,
+    color-prmary-light-3,
+    0.97,
+    0.97,
+    "./../../../images/projects/project-bg.png"
+  );
   background-size: cover;
   background-repeat: no-repeat;
   display: grid;

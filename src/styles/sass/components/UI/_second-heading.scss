@@ -1,8 +1,13 @@
 .second-heading {
   font-size: 1.6rem;
-  color: $color-accent-dark-2;
+  @include theme-aware(color, color-accent-dark-2);
   display: inline-block;
-  border-bottom: 0.2rem solid $color-accent-dark-2;
+  @include theme-aware-outline(
+    border-bottom,
+    color-accent-dark-2,
+    0.2rem,
+    solid
+  );
   padding-bottom: 0.4rem;
   text-transform: capitalize;
   font-family: branding-black;

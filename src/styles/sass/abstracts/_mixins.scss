@@ -55,3 +55,83 @@
     }
   }
 }
+
+@mixin theme-aware($key, $color) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      #{$key}: map-get(map-get($themes, $theme-name), $color);
+    }
+  }
+}
+@mixin theme-aware-darken($key, $color, $darken) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      #{$key}: darken(map-get(map-get($themes, $theme-name), $color), $darken);
+    }
+  }
+}
+@mixin theme-aware-gradient($f-color, $s-color, $deg, $f-deg, $s-deg) {
+  @each $theme-name, $theme-color in $themes {
+    $first-color: map-get(map-get($themes, $theme-name), $f-color);
+    .theme-#{$theme-name} & {
+      background: linear-gradient($deg, $first-color $f-deg, $s-color $s-deg);
+    }
+  }
+}
+@mixin theme-aware-gradient-image(
+  $f-color,
+  $s-color,
+  $opacity-1: 1,
+  $opacity-2: 1,
+  $url
+) {
+  @each $theme-name, $theme-color in $themes {
+    $first-color: map-get(map-get($themes, $theme-name), $f-color);
+    $second-color: map-get(map-get($themes, $theme-name), $s-color);
+    .theme-#{$theme-name} & {
+      background: linear-gradient(
+          rgba($first-color, $opacity-1),
+          rgba($second-color, $opacity-2)
+        ),
+        url($url);
+    }
+  }
+}
+@mixin theme-aware-gradient-text($f-color, $s-color, $deg) {
+  @each $theme-name, $theme-color in $themes {
+    $first-color: map-get(map-get($themes, $theme-name), $f-color);
+    $second-color: map-get(map-get($themes, $theme-name), $s-color);
+    .theme-#{$theme-name} & {
+      background: linear-gradient(to $deg, $first-color, $second-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+@mixin theme-aware-rgba($key, $color, $opacity) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      #{$key}: rgba(map-get(map-get($themes, $theme-name), $color), $opacity);
+    }
+  }
+}
+@mixin theme-aware-outline($key, $color, $size, $type, $opacity: 1) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      #{$key}: $size
+        $type
+        rgba(map-get(map-get($themes, $theme-name), $color), $opacity);
+    }
+  }
+}
+
+@mixin theme-aware-box-shadow($color, $opacity: 1) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      box-shadow: 0
+        0
+        0.8rem
+        rgba(map-get(map-get($themes, $theme-name), $color), $opacity);
+    }
+  }
+}

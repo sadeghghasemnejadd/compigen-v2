@@ -21,7 +21,7 @@
     }
 
     &__primary {
-      background-color: $color-accent;
+      @include theme-aware(background-color, color-accent);
     }
     &__icon-open {
       display: flex;
@@ -45,7 +45,8 @@
       height: 4rem;
       border-radius: 50%;
       right: 3.2rem;
-      background-color: $color-prmary;
+      @include theme-aware(background-color, color-prmary);
+
       z-index: map-get($z-index, menu-icon);
       &--line {
         position: absolute;
@@ -76,18 +77,24 @@
       gap: 6.4rem;
       width: 100%;
       height: 100vh;
-      background-color: rgba($color-accent, 0.5);
+      @include theme-aware-rgba(background-color, color-accent, 0.5);
       backdrop-filter: blur(3rem);
       z-index: map-get($z-index, menu);
       &__item {
         &--link {
           text-decoration: none;
-          color: $color-accent-dark-3;
+          @include theme-aware(color, color-accent-dark-3);
+
           font-size: 2rem;
           font-family: branding-black;
         }
         &--active {
-          border-bottom: 0.4rem solid $color-prmary;
+          @include theme-aware-outline(
+            border-bottom,
+            color-prmary,
+            0.4rem,
+            solid
+          );
           padding-bottom: 0.4rem;
         }
       }
@@ -103,13 +110,9 @@
     }
     &__item {
       transition: all 0.5s;
-      // &--active {
-      //   border-bottom: 0.4rem solid $color-accent;
-      //   padding-bottom: 0.4rem;
-      // }
       &--link {
         text-decoration: none;
-        color: $color-prmary-dark-3;
+        @include theme-aware(color, color-prmary-dark-3);
         font-family: branding-black;
         position: relative;
         &::after {
@@ -117,7 +120,7 @@
           position: absolute;
           width: 100%;
           height: 0.4rem;
-          background-color: $color-accent;
+          @include theme-aware(background-color, color-accent);
           bottom: -0.4rem;
           left: 0;
           transition: all 0.5s;
