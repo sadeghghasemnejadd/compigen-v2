@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import LogoIcon from "./../../../../images/svg/logo.svg";
 const Logo = () => {
+  const themesData = [
+    { id: 0, name: "yellow" },
+    { id: 1, name: "magenta" },
+    { id: 2, name: "purple" },
+  ];
+  const [curTheme, setCurTheme] = useState<string>("yellow");
+  const changeThemeHandler = (themeName: string) => {
+    setCurTheme(themeName);
+    document.documentElement.className = "";
+    document.documentElement.classList.add(`theme-${themeName}`);
+  };
   return (
     <div className="logo">
       <div className="logo__image">
@@ -10,9 +21,15 @@ const Logo = () => {
         Compi<span className="logo__text--special">gen</span>
       </p>
       <div className="logo__circles">
-        <div className="logo__circles--circle logo__circles--circle-1 logo__circles--circle-active"></div>
-        <div className="logo__circles--circle logo__circles--circle-2"></div>
-        <div className="logo__circles--circle logo__circles--circle-3"></div>
+        {themesData.map((theme) => (
+          <div
+            key={theme.id}
+            onClick={() => changeThemeHandler(theme.name)}
+            className={`logo__circles--circle logo__circles--circle-${
+              theme.id + 1
+            } ${theme.name === curTheme && "logo__circles--circle-active"}`}
+          ></div>
+        ))}
       </div>
     </div>
   );
