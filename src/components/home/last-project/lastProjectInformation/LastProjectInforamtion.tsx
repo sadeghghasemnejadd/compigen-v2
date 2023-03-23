@@ -12,7 +12,7 @@ const LastProjectInformation = ({
     <div className="last-project-information">
       <MainHeading text={title} />
       <SimpleText text={description} />
-      <LinkButton color="secondary">Read More</LinkButton>
+      {/* <LinkButton color="secondary">Read More</LinkButton> */}
     </div>
   );
 };

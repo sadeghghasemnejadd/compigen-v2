@@ -8,8 +8,9 @@ const Navbar = () => {
       <nav className="nav">
         <Nav />
       </nav>
-      <Lang />
+      {/* <Lang /> */}
     </>
   );
 };
+
 export default Navbar;

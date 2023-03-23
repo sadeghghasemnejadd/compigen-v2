@@ -7,11 +7,11 @@ const ProjectsNav = () => {
       title: "Front End Developer",
       active: true,
     },
-    {
-      id: 1,
-      title: "Graphic Design",
-      active: false,
-    },
+    // {
+    //   id: 1,
+    //   title: "Graphic Design",
+    //   active: false,
+    // },
   ]);
   return (
     <nav className="projects-nav">

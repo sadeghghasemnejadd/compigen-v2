@@ -1,18 +1,26 @@
 import Icon from "@/components/UI/Icon";
+import {
+  Behance,
+  Facebook,
+  Github,
+  Instagram,
+  Linkedin,
+  Twitter,
+} from "@/helper/config";
 import IFooterLogoData from "@/models/FooterLogoData";
 import Link from "next/link";
 import React from "react";
 const FooterButton = () => {
   const logoData: IFooterLogoData[] = [
-    { id: 0, src: "facebook", href: "/" },
-    { id: 1, src: "twitter", href: "/" },
-    { id: 2, src: "behance", href: "/" },
+    { id: 0, src: "facebook", href: Facebook },
+    { id: 1, src: "twitter", href: Twitter },
+    { id: 2, src: "github", href: Github },
     {
       id: 3,
       src: "linkedin",
-      href: "https://www.linkedin.com/in/sadegh-ghasemnejad-a4882622a",
+      href: Linkedin,
     },
-    { id: 4, src: "instagram", href: "/" },
+    { id: 4, src: "instagram", href: Instagram },
   ];
   return (
     <section className="footer-buttom">

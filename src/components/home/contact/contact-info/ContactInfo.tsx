@@ -4,6 +4,7 @@ import behancePic from "@/images/logos/behance.png";
 import githubPic from "@/images/logos/github.png";
 import Link from "next/link";
 import Image from "next/legacy/image";
+import { Behance, Dribbble, Github } from "@/helper/config";
 
 const ContactInfo = () => {
   const contactData = [
@@ -20,19 +21,19 @@ const ContactInfo = () => {
       id: 0,
       src: dribblePic,
       alt: "dribbble",
-      url: "google.com",
+      url: Dribbble,
     },
     {
       id: 1,
       src: behancePic,
       alt: "behance",
-      url: "google.com",
+      url: Behance,
     },
     {
       id: 2,
       src: githubPic,
       alt: "github",
-      url: "google.com",
+      url: Github,
     },
   ];
   return (

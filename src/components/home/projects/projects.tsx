@@ -13,7 +13,7 @@ const Projects = () => {
         <ProjectsPic activeTab={activeTab} />
       </div>
       <div className="projects__link">
-        <LinkButton color="secondary">Read More</LinkButton>
+        {/* <LinkButton color="secondary">Read More</LinkButton> */}
       </div>
     </section>
   );
