@@ -2,11 +2,11 @@
   "name": "compigen-v2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://compigen.net",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -23,6 +23,7 @@
     "react-dom": "18.2.0",
     "react-spinners": "^0.13.8",
     "sass": "^1.57.1",
+    "sharp": "^0.32.0",
     "styled-components": "^5.3.6",
     "typescript": "4.9.4"
   },
