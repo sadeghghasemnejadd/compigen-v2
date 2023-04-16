@@ -54,6 +54,7 @@ const Nav = () => {
                 <Link
                   href={`#${nav.section}`}
                   className="nav__menu__list__item--link"
+                  aria-label={nav.section}
                 >
                   {nav.title}
                 </Link>
@@ -74,6 +75,7 @@ const Nav = () => {
               href={`/`}
               className="nav__list__item--link"
               onClick={(e) => scrollHandler(e, nav.section)}
+              aria-label={nav.section}
             >
               {nav.title}
             </Link>

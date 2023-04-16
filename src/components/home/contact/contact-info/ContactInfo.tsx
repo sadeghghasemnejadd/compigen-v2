@@ -62,6 +62,7 @@ const ContactInfo = () => {
                 href={logo.url}
                 className="contact-info__works__logos--logo--link"
                 key={logo.id}
+                aria-label={logo.alt}
               >
                 <Image src={logo.src} alt={logo.alt} layout="intrinsic" />
               </Link>

@@ -30,6 +30,7 @@ const Footer = () => {
                 href={`#${menu.to}`}
                 className="footer-menu__list__item--link"
                 onClick={(e) => scrollHandler(e, menu.to)}
+                aria-label={menu.name}
               >
                 {menu.name}
               </Link>

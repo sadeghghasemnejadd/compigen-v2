@@ -30,6 +30,7 @@ const FooterButton = () => {
           href="https://www.linkedin.com/in/sadegh-ghasemnejad-a4882622a"
           className="footer-buttom__copyright--link"
           target="_blank"
+          aria-label="linkedin"
         >
           Sadegh
         </Link>{" "}
@@ -42,6 +43,7 @@ const FooterButton = () => {
               href={logo.href}
               className="footer-buttom__list__item__link"
               target="_blank"
+              aria-label={logo.src}
             >
               <Icon
                 icon={logo.src}

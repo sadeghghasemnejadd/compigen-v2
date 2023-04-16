@@ -20,7 +20,7 @@ const SocialMedia = () => {
   return (
     <div className="hero__socialmedia">
       {socialMediaData.map((social) => (
-        <Link href={social.link} key={social.id}>
+        <Link href={social.link} key={social.id} aria-label={social.icon}>
           <Icon size={30} icon={social.icon} />
         </Link>
       ))}
